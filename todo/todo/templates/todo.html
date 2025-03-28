@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="{% static 'css/todo.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+</head>
+<body>
+    <div class="signup-login">
+        <div><h1>Hello {{user}}</h1></div>
+        <div class="signup-box">
+            <div class="heading">
+                My Todo List
+            </div>
+            <div class="anca"><a href="{% url 'signout' %}" class="sign"><i class="fa-solid fa-right-from-bracket"></i></a></div>
+            <form method="post">
+                {% csrf_token %}
+                <input type="text" class="inp" name="title" required placeholder="Enter task">
+                <input type="submit" class="submit-button" value="Add task">
+            </form>
+            {% for todo in res %}
+                <div class="todo">
+                    <h5>{{todo.srno}}</h5>
+                    <p>{{todo.title}}</p>
+                </div>
+                <div>
+                    <a href="/edit_todo/{{todo.srno}}"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a href="/delete_todo/{{todo.srno}}"><i class="fa-solid fa-trash"></i></a>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

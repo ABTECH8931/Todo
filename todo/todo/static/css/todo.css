@@ -1,0 +1,130 @@
+/* static/css/todo.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #FF6E7F, #BFE9FF); /* Same gradient as signup form */
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.signup-login {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.signup-box {
+    background: rgba(255, 255, 255, 0.2); /* Same glassmorphism as signup form */
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.heading {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.anca {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.sign {
+    color: #333;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.inp {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #333;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #FF6E7F, #BFE9FF); /* Same gradient as signup form */
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+    background: linear-gradient(135deg, #BFE9FF, #FF6E7F); /* Reversed gradient on hover */
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 10px;
+}
+
+.todo h5 {
+    margin: 0;
+    width: 30px;
+}
+
+.todo p {
+    margin: 0;
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.todo-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.edit-icon, .delete-icon {
+    color: #333;
+    font-size: 18px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.edit-icon:hover, .delete-icon:hover {
+    color: #1E88E5;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .signup-login {
+        padding: 10px;
+    }
+
+    .signup-box {
+        padding: 20px;
+    }
+
+    .heading {
+        font-size: 20px;
+    }
+
+    .todo p {
+        font-size: 14px;
+    }
+}

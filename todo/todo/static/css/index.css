@@ -1,0 +1,99 @@
+/* static/css/index.css */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #FF6E7F, #BFE9FF); /* Color Gradient here */
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.signup-login {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.signup-box {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.heading {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.line {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    margin: 15px 0;
+}
+
+.field {
+    margin-bottom: 15px;
+}
+
+.field b {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.inp {
+    width: 100%;
+    padding: 10px;
+    border: none; /* Remove the border */
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #333;
+    box-sizing: border-box;
+    outline: none; /* Remove the outline on focus */
+}
+
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #FF6E7F, #BFE9FF); /* Color Gradient here */
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+    background: linear-gradient(135deg, #BFE9FF, #FF6E7F); /* Reversed gradient on hover*/
+}
+
+.anc {
+    color: #2980B9;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .signup-login {
+        padding: 10px;
+    }
+
+    .signup-box {
+        padding: 20px;
+    }
+
+    .heading {
+        font-size: 20px;
+    }
+}
